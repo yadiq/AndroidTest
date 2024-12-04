@@ -1,11 +1,13 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 28
+    compileSdk 31
     defaultConfig {
         applicationId "com.hqumath.androidtest"
-        minSdkVersion 18
-        targetSdkVersion 28
+        minSdk 18
+        targetSdk 31
         versionCode 1
         versionName "1.0"
         //指定仪器测试运行器
@@ -28,10 +30,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.0.0'
-
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    
     ///////////////////local unit tests
     //JUnit 4 framework
     testImplementation 'junit:junit:4.12'
